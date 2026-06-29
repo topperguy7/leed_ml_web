@@ -146,9 +146,8 @@ Successful Response Blueprint:
 
 ⚠️ Note: If the backend returns success: false or encounters a network connectivity error, the interface gracefully displays an error message or "No Prediction" status to the user.
 <hr>
-## ✍️ Author
+<h1>✍️ Author</h1>
 
 * **topperguy** - *Full-Stack Developer & ML Integrator* - [@topperguy7](https://github.com/topperguy7)
 
----
 *Feel free to connect, open an issue, or fork this repository if you find it helpful!*
