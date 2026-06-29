@@ -29,16 +29,35 @@ The application operates as a decoupled Full-Stack system:
 
 <h2>🛠️ Tech Stack</h2>
 
-<h4>Frontend</h4>
+Frontend
 <li>React (with TypeScript)</li>
 <li>Tailwind CSS</li><br>
 
-<h4>Backend</h4>
+Backend
 <li>Node.js & Express (TypeScript)</li>
 <li>onnxruntime-node (for low-latency model inference)</li>
 <li>cors (Cross-Origin Resource Sharing middleware)</li><br>
 
-<h4>Model & Machine Learning</h4>
+Model & Machine Learning
 <li>Model Type: Scikit-learn TreeEnsembleClassifier</li>
 <li>Format: ONNX (Exported via skl2onnx v1.20.0)</li>
 <hr>
+
+<h1>📋 Input Feature Payload</h1>
+The model parses a matrix of 13 numeric metrics passed from the frontend form into a 1x13 Float32Array tensor wrapper for classification:
+
+| Tensor Index | Parameter Key | Data Type | UI Field Equivalent | Description |
+| :---: | :--- | :---: | :--- | :--- |
+| **0** | `Building_Area_sqft` | `number` | Internal Area (sqft) | Total indoor usable floor area in square feet. |
+| **1** | `floors` | `number` | Story Floors | Total number of functional above-ground building levels. |
+| **2** | `Building_Age_Years` | `number` | Structural Age | The total age of the facility structure in years. |
+| **3** | `Energy_Consumption_kWh` | `number` | Annual Energy (kWh) | Cumulative annual electricity usage in kilowatt-hours. |
+| **4** | `Water_Consumption_Liters` | `number` | Annual Water (Liters) | Cumulative annual indoor/outdoor water usage in liters. |
+| **5** | `Average_Temperature_C` | `number` | Avg Temp (°C) | Regional baseline ambient temperature in Celsius. |
+| **6** | `Annual_Rainfall_mm` | `number` | Annual Rainfall (mm) | Total regional annual precipitation height in millimeters. |
+| **7** | `Solar_Radiation_kWh_m2` | `number` | Solar Radiation | Structural solar exposure footprint density ($kWh/m^2$). |
+| **8** | `Humidity_Percent` | `number` | Humidity (%) | Average relative atmospheric humidity scale (0 - 100). |
+| **9** | `Urban_Density_Index` | `number` | Urban Density Index | Surrounding infrastructure density ranking matrix (0 - 10). |
+| **10** | `Public_Transport_Access_Score` | `number` | Transport Access Score | Proximity and density score for local transit grids (0 - 10). |
+| **11** | `Green_Cover_Percent` | `number` | Green Canopy (%) | Surrounding environmental lot vegetation density (0 - 100). |
+| **12** | `Renewable_Energy_Usage_Percent`| `number` | Clean Energy (%) | Ratio of building power sourced from renewable grids (0 - 100). |
