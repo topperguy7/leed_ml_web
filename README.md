@@ -31,12 +31,12 @@ The application operates as a decoupled Full-Stack system:
 
 <h4>Frontend</h4>
 <li>React (with TypeScript)</li>
-<li>Tailwind CSS</li>
+<li>Tailwind CSS</li><br>
 
 <h4>Backend</h4>
 <li>Node.js & Express (TypeScript)</li>
 <li>onnxruntime-node (for low-latency model inference)</li>
-<li>cors (Cross-Origin Resource Sharing middleware)</li>
+<li>cors (Cross-Origin Resource Sharing middleware)</li><br>
 
 <h4>Model & Machine Learning</h4>
 <li>Model Type: Scikit-learn TreeEnsembleClassifier</li>
