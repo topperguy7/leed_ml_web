@@ -113,3 +113,34 @@ Prerequisites:
    
         npm run dev
 <hr>
+<h1>🔌 API Reference</h1>
+Predict LEED Rating
+<li>URL: /leed-prediction</li>
+<li>Method: POST</li>
+<li>Headers: Content-Type: application/json</li>
+
+Request Payload Body Example:
+
+       {
+         "Building_Area_sqft": 15000,
+         "floors": 3,
+         "Building_Age_Years": 12,
+         "Energy_Consumption_kWh": 45000,
+         "Water_Consumption_Liters": 80000,
+         "Average_Temperature_C": 22.5,
+         "Annual_Rainfall_mm": 1200,
+         "Solar_Radiation_kWh_m2": 4.5,
+         "Humidity_Percent": 60,
+         "Urban_Density_Index": 7,
+         "Public_Transport_Access_Score": 8,
+         "Green_Cover_Percent": 35,
+         "Renewable_Energy_Usage_Percent": 25
+       }
+
+Successful Response Blueprint:
+
+       {
+        "success": "true",
+         "prediction": "Gold"
+       }
+<hr>
