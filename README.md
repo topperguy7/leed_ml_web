@@ -25,3 +25,20 @@ The application operates as a decoupled Full-Stack system:
 <li>Backend: Node.js + Express API endpoint (POST /leed-prediction) built in TypeScript.</li>
 
 <li>ML Engine: The backend loads an exported TreeEnsembleClassifier model (leed_classifier.onnx) directly using onnxruntime-node to predict certifications seamlessly without needing a separate Python runtime.</li>
+<hr>
+
+<h2>🛠️ Tech Stack</h2>
+
+Frontend
+<li>React (with TypeScript)</li>
+<li>Tailwind CSS</li>
+
+Backend
+<li>Node.js & Express (TypeScript)</li>
+<li>onnxruntime-node (for low-latency model inference)</li>
+<li>cors (Cross-Origin Resource Sharing middleware)</li>
+
+Model & Machine Learning
+<li>Model Type: Scikit-learn TreeEnsembleClassifier</li>
+<li>Format: ONNX (Exported via skl2onnx v1.20.0)</li>
+<hr>
