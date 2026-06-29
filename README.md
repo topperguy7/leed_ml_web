@@ -29,16 +29,16 @@ The application operates as a decoupled Full-Stack system:
 
 <h2>🛠️ Tech Stack</h2>
 
-Frontend
+<h4>Frontend</h4>
 <li>React (with TypeScript)</li>
 <li>Tailwind CSS</li>
 
-Backend
+<h4>Backend</h4>
 <li>Node.js & Express (TypeScript)</li>
 <li>onnxruntime-node (for low-latency model inference)</li>
 <li>cors (Cross-Origin Resource Sharing middleware)</li>
 
-Model & Machine Learning
+<h4>Model & Machine Learning</h4>
 <li>Model Type: Scikit-learn TreeEnsembleClassifier</li>
 <li>Format: ONNX (Exported via skl2onnx v1.20.0)</li>
 <hr>
