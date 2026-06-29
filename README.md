@@ -61,3 +61,55 @@ The model parses a matrix of 13 numeric metrics passed from the frontend form in
 | **10** | `Public_Transport_Access_Score` | `number` | Transport Access Score | Proximity and density score for local transit grids (0 - 10). |
 | **11** | `Green_Cover_Percent` | `number` | Green Canopy (%) | Surrounding environmental lot vegetation density (0 - 100). |
 | **12** | `Renewable_Energy_Usage_Percent`| `number` | Clean Energy (%) | Ratio of building power sourced from renewable grids (0 - 100). |
+<hr>
+
+<h1>Output Target Categories</h1>
+
+The ONNX execution pipeline parses the computed classification array indexes directly to return one of the five target states:
+<li>Not Certified</li>
+<li>Certified</li>
+<li>Silver</li>
+<li>GOld</li>
+<li>Platinum</li>
+<hr>
+
+<h1>⚙️ Setup and Installation</h1>
+
+Prerequisites:
+<li>Node.js (v20 or newer recommended</li>
+<li>npm</li>
+
+1. Repository Setup
+
+       git clone https://github.com/topperguy7/leed_ml_web.git
+       cd leed_ml_Web
+
+2. Backend Setup (Node.js/Express + TS)
+
+    Navigate into your backend workspace.
+
+    Install the production and build dependencies:
+    Bash
+
+        npm install express cors onnxruntime-node
+        npm install --save-dev typescript @types/express @types/cors @types/node ts-node
+
+    Ensure your leed_classifier.onnx file is mapped to the designated path inside your engine initialize route (../../Leed_Model/).
+
+    Boot up your TypeScript development API server:
+
+        # Runs express app on port 8000
+        npm run dev 
+
+3. Frontend Setup (React + TS)
+
+    Open a new terminal instance in your frontend workspace folder.
+
+    Install client dependencies:
+
+        npm install
+
+    Spin up the client development instance server:
+   
+        npm run dev
+<hr>
